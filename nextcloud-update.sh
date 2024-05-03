@@ -18,7 +18,6 @@ if [ "$USER" != "$SHOULD_BE_ROOT" ]; then
   exit 1
 fi
 
-
 # solicit user input: semantic version of Nextcloud to download
 echo "Version to download (e.g. 27.0.2): $1"
 VERSION_TO_DOWNLOAD=$1
@@ -94,7 +93,6 @@ setup_new_nextcloud_version()
   echo "Turning off maintenance mode ..."
   sudo -u $NGINX_USER php occ maintenance:mode --off
 }
-
 
 restart_services()
 {
